@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon">
+    <title>playerone</title>
+    <style>
+      .init-loading{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        left: 0;
+        top: 0;
+        background: #101229;
+      }
+      .init-loading-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+      }
+      .init-loading-icon{
+        display: inline-block;
+        -webkit-animation: initLoadingRouter 2s linear infinite;
+                animation: initLoadingRouter 2s linear infinite
+      }
+      .init-loading-text{
+        padding-top: 20px;
+        color: #7693da;
+      }
+      @-webkit-keyframes initLoadingRouter {
+        from{-webkit-transform: rotate(0);transform: rotate(0)}
+        to{-webkit-transform: rotate(360deg);transform: rotate(360deg)}
+      }
+      @keyframes initLoadingRouter {
+        from{-webkit-transform: rotate(0);transform: rotate(0)}
+        to{-webkit-transform: rotate(360deg);transform: rotate(360deg)}
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="init-loading">
+        <div class="init-loading-wrap">
+          <div class="init-loading-icon">
+            <img src="./static/favicon.png" alt="">
+          </div>
+          <div class="init-loading-text">READY...</div>
+        </div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
